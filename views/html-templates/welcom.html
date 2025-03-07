@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Natours.io</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; }
+        h2 { color: #2d8f31; }
+        p { color: #555; line-height: 1.5; }
+        .btn { display: inline-block; background-color: #2d8f31; color: #ffffff; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-size: 16px; }
+        .btn:hover { background-color: #237024; }
+        .footer { margin-top: 20px; font-size: 12px; color: #777; }
+        .logo { width: 150px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{%LOGO%}}" alt="Natours Logo" class="logo">
+        <h2>Welcome to Natours.io!</h2>
+        <p>Hello, {{%USER_NAME%}}</p>
+        <p>{{%MESSAGE%}}</p>
+        <p>We are thrilled to have you join our adventure community. Get ready to explore breathtaking tours and create unforgettable experiences.</p>
+        <p>Start exploring now by clicking below:</p>
+        <p>
+            <a href="{{%HOME_PAGE_URL%}}" class="btn">Explore Now</a>
+        </p>
+        <p>Need any help? Feel free to reach out to our support team anytime.</p>
+        <hr>
+        <p class="footer">© 2025 Natours.io. All rights reserved.</p>
+    </div>
+</body>
+</html>
