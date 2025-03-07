@@ -6,6 +6,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+const cors = require('cors');
 
 const multer = require('multer');
 const path = require('path');
@@ -53,14 +54,17 @@ app.use(
     })
 ); 
 
-// Logs request details for debugging and monitoring
-if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));  
-}
+// Implement cors
+app.use(cors());
+app.options('*', cors());
 
 // enable Gzip compression for HTTP responses
 app.use(compression());
 
+// Logs request details for debugging and monitoring
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'));  
+}
 
 // serving static files
 app.use(express.static(`${__dirname}/public`));

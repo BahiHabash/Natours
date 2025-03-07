@@ -16,6 +16,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "compression": "^1.8.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "express-mongo-sanitize": "^2.2.0",
@@ -48,6 +49,6 @@
     "eslint-plugin-react": "^7.37.1"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": "^20.0.0"
   }
 }
