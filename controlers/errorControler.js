@@ -11,7 +11,6 @@ const handleValidationErrorDB = (error) => {
 };
 
 const handleDuplicateFieldsDB = (error) => {
-    console.log(error)
     const [key, value] = Object.entries(error.keyValue)[0];
     return new AppError(`"${key}" field is duplicated with the value: ${value}, plz change the value`, 400);
 }

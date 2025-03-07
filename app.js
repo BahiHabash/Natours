@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const mongoSanitize = require('express-mongo-sanitize');
+const compression = require('compression');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 
@@ -57,9 +58,12 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));  
 }
 
+// enable Gzip compression for HTTP responses
+app.use(compression());
+
+
 // serving static files
 app.use(express.static(`${__dirname}/public`));
-
 
 
 /* -------------------------------------- */
